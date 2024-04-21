@@ -1,0 +1,59 @@
+* {
+    overflow: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(38, 52, 115);
+    margin: 0;
+}
+#divArrow {
+    display: flex;
+    width: 80vw;
+    margin-top: 10vh;
+}
+#BackArrow {
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-start;
+    height: 75px;
+    width: auto;
+}
+#formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+    row-gap: 25px;
+    font-size: 40px;
+    width: 400px;
+    height: 475px;
+    background-color: white;
+    border-radius: 20px;
+}
+#formTitre {
+    display: flex;
+    font-size: 50px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+input {
+    display: flex;
+    align-content: center;
+    height: 30px;
+    width: 290px;
+    font-size: 25px;
+}
+button {
+    height: 40px;
+    font-size: 30px;
+    margin-top: 20px;
+}

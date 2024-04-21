@@ -1,0 +1,100 @@
+*{
+    padding: 0%;
+    margin: 0;
+    overflow-x: hidden;
+    text-decoration: none;
+    color: white;
+}
+body{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(108, 108, 108);
+}
+#img{
+    height: 850px;
+    width: 680px;
+    border-width: 2px;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: top;
+}
+#character{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+#texteDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+#informations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 130px;
+}
+#blason{
+    display: flex;
+    background-color: blueviolet;
+    height: 375px;
+    width: 300px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+
+.gryffondor{
+    background-image: url("../images/Gryffindor.jpg");
+    background-size: cover;
+}
+.gryffClr{
+    background-color: #740001;
+}
+.serpentard{
+    background-image: url("../images/Slytherin.jpg");
+    background-size: cover;
+}
+.serpClr{
+    background-color: #1a472a;
+}
+.poufsouffle{
+    background-image: url("../images/Hufflepuff.jpg");
+    background-size: cover;
+}
+.poufClr{
+    background-color: #ecb939;
+}
+.serdaigle{
+    background-image: url("../images/Ravenclaw.jpg");
+    background-size: cover;
+}
+.serdClr{
+    background-color: #0e1a40;
+}
+.unaffiliated{
+    background-image: url("../images/Unaffiliated.jpg");
+    background-size: cover;
+}
+.unaffClr{
+    background-color: rgba(255, 255, 255, 0.508);
+}
+
+#texte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-position: left;
+    width: 500px;
+}
+#backBtn{
+    display: flex;
+    margin-top: 40px;
+}

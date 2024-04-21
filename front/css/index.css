@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/Poudlard_Bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hautPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+#Poudlard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 35vw;
+    height: 75px;
+}
+#creaCompte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+#compte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+#Collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 350px;
+    width: 300px;
+    margin-left: 20px;
+}
+#logoSac {
+    height: 200px;
+    width: auto;
+}
+#txtCollection {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}

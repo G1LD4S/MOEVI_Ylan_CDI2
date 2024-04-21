@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/Hp_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+}
+#divArrow {
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    margin-top: 5vh;
+}
+#BackArrow {
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-start;
+    height: 75px;
+    width: auto;
+}
+#profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 8vh;
+    width: 35vw;
+    height: 70vh;
+    border-radius: 60px;
+    backdrop-filter: blur(20px);
+}
+#profilTitre {
+    display: flex;
+    font-size: 50px;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+.casesInfos {
+    display: flex;
+    font-size: 30px;
+}
+#name {
+    display: flex;
+    margin-top: 5vh;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Harry Potter</title>
+        <link rel="stylesheet" href="css/characters.css" />
+    </head>
+    <body>
+        <div id="hautPage">
+            <a href="index.html" id="backBtn">
+                <img
+                    src="images/BackArrow.png"
+                    alt="BackArrow"
+                    id="BackArrow"
+                />
+            </a>
+            <h1 id="pageTitre">Characters</h1>
+            <div id="compte">
+                <h2 id="Connexion">
+                    <a href="connexion.html">Se connecter</a>
+                </h2>
+                <div id="creaCompte">
+                    <h4>Vous n'avez pas de compte ?</h4>
+                    <h4><a href="inscriptions.html">Créez-en un!</a></h4>
+                </div>
+            </div>
+        </div>
+        <div id="characters"></div>
+
+        <script>
+            function fetchCharacters() {
+                return fetch("https://hp-api.lainocs.fr/characters").then(
+                    (response) => response.json()
+                );
+            }
+
+            async function displayCharacters() {
+                const data = await fetchCharacters();
+                data.forEach((character) => {
+                    document.querySelector("#characters").innerHTML += `
+                    <a href="single-hp.html?slug=${character.slug}">
+                        <div class="character">
+                            <h2 class="character_name">${character.name}</h2>
+                            <img src="${character.image}" alt="${character.name}" class="character_image">
+                        </div>
+                    </a>
+                `;
+                });
+            }
+            displayCharacters();
+        </script>
+    </body>
+</html>
