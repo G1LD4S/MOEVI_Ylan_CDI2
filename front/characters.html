@@ -26,29 +26,35 @@
                 </div>
             </div>
         </div>
-        <div id="characters"></div>
+        <main>
+            <div class="optionsBox">
+                <div class="filterBox">
+                    <button class="filterBtn active" data-filter="all">
+                        All
+                    </button>
+                    <button class="filterBtn" data-filter="gryffindor">
+                        Gryffindor
+                    </button>
+                    <button class="filterBtn" data-filter="ravenclaw">
+                        Ravenclaw
+                    </button>
+                    <button class="filterBtn" data-filter="hufflepuff">
+                        Hufflepuff
+                    </button>
+                    <button class="filterBtn" data-filter="slytherin">
+                        Slytherin
+                    </button>
+                    <button class="filterBtn" data-filter="none">
+                        No house
+                    </button>
+                </div>
+            </div>
+            <div id="divSrc">
+                <input type="text" name="searchBar" id="searchBar" />
+            </div>
+            <div id="characters"></div>
+        </main>
 
-        <script>
-            function fetchCharacters() {
-                return fetch("https://hp-api.lainocs.fr/characters").then(
-                    (response) => response.json()
-                );
-            }
-
-            async function displayCharacters() {
-                const data = await fetchCharacters();
-                data.forEach((character) => {
-                    document.querySelector("#characters").innerHTML += `
-                    <a href="single-hp.html?slug=${character.slug}">
-                        <div class="character">
-                            <h2 class="character_name">${character.name}</h2>
-                            <img src="${character.image}" alt="${character.name}" class="character_image">
-                        </div>
-                    </a>
-                `;
-                });
-            }
-            displayCharacters();
-        </script>
+        <script src="./js/characters.js"></script>
     </body>
 </html>

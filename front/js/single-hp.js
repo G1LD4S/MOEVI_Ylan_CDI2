@@ -1,9 +1,11 @@
-function fetchCharacter() {
+async function fetchCharacter() {
     let url = window.location.search;
     let slug = new URLSearchParams(url).get("slug");
-    return fetch("https://hp-api.lainocs.fr/characters/" + slug).then(
-        (response) => response.json()
+    const response = await fetch(
+        "https://hp-api.lainocs.fr/characters/" + slug
     );
+
+    return await response.json();
 }
 
 async function displayCharacter() {
