@@ -6,7 +6,7 @@ class AuthMiddleware {
         const authHeader = req.headers["authorization"];
         const token = authHeader && authHeader.split(" ")[1];
 
-        console.log("Authenticating token: ", token);
+        // console.log("Authenticating token: ", token);
 
         if (token == null) return res.sendStatus(401);
 
@@ -23,6 +23,11 @@ class AuthMiddleware {
                 const user = await prisma.user.findUnique({
                     where: {
                         email,
+                    },
+                    select: {
+                        id: true,
+                        name: true,
+                        email: true,
                     },
                 });
 

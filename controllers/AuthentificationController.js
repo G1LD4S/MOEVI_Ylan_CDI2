@@ -27,7 +27,6 @@ class AuthentificationController {
             }
 
             // ICI ON GENERE UN TOKEN
-
             const token = generateToken(user);
 
             return res.status(200).send({ user, token });

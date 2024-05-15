@@ -1,5 +1,6 @@
 const prisma = require("../config/prisma");
 const { hashPassword } = require("../utils/bcrypt");
+const { generateToken } = require("../utils/jwt");
 
 class UsersController {
     async getMyProfile(req, res) {
@@ -23,8 +24,16 @@ class UsersController {
                     email: body.email,
                     password: await hashPassword(body.password),
                 },
+                select: {
+                    name: true,
+                    email: true,
+                },
             });
-            return res.status(201).send(user);
+
+            // ICI ON GENERE UN TOKEN
+            const token = generateToken(user);
+
+            return res.status(201).send({ user, token });
         } catch (e) {
             return res.status(500).send({
                 message: e.message,

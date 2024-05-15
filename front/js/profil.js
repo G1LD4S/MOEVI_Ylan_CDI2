@@ -10,6 +10,15 @@ const getMyProfile = async () => {
         },
     });
 
+    if (
+        response.status === 401 ||
+        response.status === 403 ||
+        response.status === 404
+    ) {
+        localStorage.removeItem("token");
+        window.location.href = "connexion.html";
+    }
+
     const data = await response.json();
 
     caseEmail.innerHTML += data.email;
