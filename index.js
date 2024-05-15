@@ -23,6 +23,5 @@ app.post("/", (req, res) => {
 });
 
 app.listen(port, () => {
-    // console.log(`Example app listening on port ${port}`);
-    console.log("Server run: http://" + ipAddr + ":3000");
+    console.log(`Example app listening on port ${port}`);
 });
