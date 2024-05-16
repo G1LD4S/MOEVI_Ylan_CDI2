@@ -28,6 +28,7 @@ class AuthMiddleware {
                         id: true,
                         name: true,
                         email: true,
+                        booster: true,
                     },
                 });
 

@@ -6,53 +6,100 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-image: url(../images/Poudlard_Bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#hautPage {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 15px;
-    width: 100%;
-}
-#Poudlard {
+#welcome {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 35vw;
     height: 75px;
+}
+
+/*                                                    Navigation bar                                                    */
+
+#Nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 80vw;
+    background-color: #113e65;
+    color: white;
+    border-radius: 20px;
+    border-bottom: 2px;
+}
+#Home {
+    display: flex;
+    height: 100%;
+    width: 7%;
+    align-items: center;
+    justify-content: center;
+}
+#Home:hover {
+    background-color: #145186;
+    transition: 0.5s;
+}
+#collection {
+    display: flex;
+    height: 100%;
+    width: 8%;
+    align-items: center;
+    justify-content: center;
+}
+#collection:hover {
+    background-color: #145186;
+    transition: 0.5s;
+}
+#boosters {
+    display: flex;
+    height: 100%;
+    width: 7%;
+    align-items: center;
+    justify-content: center;
+}
+#boosters:hover {
+    background-color: #145186;
+    transition: 0.5s;
+}
+#Connexion {
+    display: flex;
+    height: 100%;
+    width: 9%;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+#Connexion:hover {
+    background-color: #145186;
+    transition: 0.5s;
+}
+#connexionTxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#compte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 14%;
+    align-items: center;
+    justify-content: center;
+}
+#compte:hover {
+    background-color: #145186;
+    transition: 0.5s;
 }
 #creaCompte {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
-}
-#compte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-}
-#Collection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 350px;
-    width: 300px;
-    margin-left: 20px;
-}
-#logoSac {
-    height: 200px;
-    width: auto;
-}
-#txtCollection {
-    display: flex;
-    justify-content: center;
-    width: 200px;
 }

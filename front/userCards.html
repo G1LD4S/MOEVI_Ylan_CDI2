@@ -3,8 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Harry Potter</title>
-        <link rel="stylesheet" href="css/characters.css" />
+        <script>
+            if (!localStorage.getItem("token")) {
+                window.location.href = "connexion.html";
+            }
+        </script>
+        <title>Document</title>
+        <link rel="stylesheet" href="css/userCards.css" />
     </head>
     <body>
         <div id="Nav">
@@ -59,9 +64,9 @@
             <div id="divSrc">
                 <input type="text" name="searchBar" id="searchBar" />
             </div>
-            <div id="characters"></div>
+            <div id="cardsOwned"></div>
         </main>
 
-        <script src="./js/characters.js"></script>
+        <script src="./js/userCards.js"></script>
     </body>
 </html>

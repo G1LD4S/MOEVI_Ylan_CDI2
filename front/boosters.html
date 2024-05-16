@@ -3,8 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            if (!localStorage.getItem("token")) {
+                window.location.href = "connexion.html";
+            }
+        </script>
+        <link rel="stylesheet" href="./css/booster.css" />
         <title>Document</title>
-        <link rel="stylesheet" href="css/index.css" />
     </head>
     <body>
         <div id="Nav">
@@ -33,6 +38,13 @@
                 </div>
             </div>
         </div>
-        <h1 id="welcome">Welcome to Poudlard!</h1>
+        <div id="titrePage">
+            <h1>Ouvrez jusqu'à un booster par jour!</h1>
+        </div>
+        <div class="drawButton">
+            <button class="testBtn" id="boosterBtn">Ouvrir un booster</button>
+        </div>
+        <div id="newCards"></div>
+        <script src="./js/booster.js"></script>
     </body>
 </html>

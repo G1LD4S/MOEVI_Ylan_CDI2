@@ -94,16 +94,19 @@ searchBar.addEventListener("input", (e) => {
     // if not empty, let's filter !
     if (searchValue) {
         let newArray = dataArray.filter((perso) =>
-            perso.name.toLowerCase().startsWith(searchValue.toLowerCase())
+            perso.name
+                .toLowerCase()
+                .replace(/\s/g, "")
+                .startsWith(searchValue.toLowerCase())
         );
 
         // looking for the card
         if (newArray.length > 0) {
             for (let card = 0; card < newArray.length; card++) {
-                const cardFiltered = document.getElementById(
-                    `${newArray[card].id}`
+                const cardFiltered = document.querySelector(
+                    `[data-name="${newArray[card].name}"]`
                 );
-                cardFiltered.classList.remove("hidden");
+                cardFiltered?.classList.remove("hidden");
             }
         }
 

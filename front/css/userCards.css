@@ -10,8 +10,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 100vw;
-    background-color: #1f3d71;
+    width: 100%;
+    background-color: #234c6f;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 /*                                                    Navigation bar                                                    */
@@ -46,8 +53,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-#collectionTxt {
-    color: black;
+#collection:hover {
+    background-color: #2d2d2d;
+    transition: 0.5s;
 }
 #userCards {
     display: flex;
@@ -56,9 +64,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-#userCards:hover {
-    background-color: #2d2d2d;
-    transition: 0.5s;
+#userCardsTxt {
+    color: black;
 }
 #boosters {
     display: flex;
