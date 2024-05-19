@@ -29,6 +29,7 @@ boosterBtn.addEventListener("click", async () => {
 function displayCardsWindow(cards) {
     // Faire une boucle dans cards pour créer chaque carte
     const boxCards = document.querySelector("#newCards");
+    console.log(cards);
     cards.forEach((card) => {
         const cardEl = document.createElement("div");
         cardEl.classList.add("boosterCard");

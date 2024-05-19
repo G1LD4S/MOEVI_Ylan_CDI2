@@ -55,6 +55,17 @@ body {
     background-color: #145186;
     transition: 0.5s;
 }
+#userCards {
+    display: flex;
+    height: 100%;
+    width: 8%;
+    align-items: center;
+    justify-content: center;
+}
+#userCards:hover {
+    background-color: #145186;
+    transition: 0.5s;
+}
 #boosters {
     display: flex;
     height: 100%;
