@@ -1,0 +1,137 @@
+#Nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 90vw;
+    background-color: #6b6b6b;
+    border-radius: 20px;
+    border-bottom: 2px;
+}
+#Home {
+    display: flex;
+    height: 100%;
+    width: 7%;
+    align-items: center;
+    justify-content: center;
+}
+#Home:hover {
+    background-color: #2d2d2d;
+    transition: 0.5s;
+}
+#collection {
+    display: flex;
+    height: 100%;
+    width: 8%;
+    align-items: center;
+    justify-content: center;
+}
+#collection:hover {
+    background-color: #2d2d2d;
+    transition: 0.5s;
+}
+#userCards {
+    display: flex;
+    height: 100%;
+    width: 8%;
+    align-items: center;
+    justify-content: center;
+}
+#userCards:hover {
+    background-color: #2d2d2d;
+    transition: 0.5s;
+}
+#boosters {
+    display: flex;
+    height: 100%;
+    width: 7%;
+    align-items: center;
+    justify-content: center;
+}
+#boosters:hover {
+    background-color: #2d2d2d;
+    transition: 0.5s;
+}
+#Connexion {
+    display: flex;
+    height: 100%;
+    width: 9%;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+#Connexion:hover {
+    background-color: #2d2d2d;
+    transition: 0.5s;
+}
+#connexionTxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#compte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 14%;
+    align-items: center;
+    justify-content: center;
+}
+#compte:hover {
+    background-color: #2d2d2d;
+    transition: 0.5s;
+}
+#creaCompte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#darkmodeBtn {
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+}
+#darkmodeBtn :hover {
+    cursor: pointer;
+}
+#darkmodeIcon {
+    display: flex;
+    height: 45px;
+    width: 45px;
+}
+
+/*                                            Darkmode                                        */
+
+.darkMode {
+    background-color: white;
+    transition: 0.5s;
+}
+
+.darkMode #Nav {
+    background-color: #cacaca;
+    color: black;
+    transition: 0.5s;
+}
+
+.darkMode #Home:hover {
+    background-color: #979797;
+}
+.darkMode #collection:hover {
+    background-color: #979797;
+}
+.darkMode #userCards:hover {
+    background-color: #979797;
+}
+.darkMode #boosters:hover {
+    background-color: #979797;
+}
+.darkMode #Connexion:hover {
+    background-color: #979797;
+}
+.darkMode #compte:hover {
+    background-color: #979797;
+}
