@@ -67,6 +67,22 @@ async function displayCards(relations, total) {
     await fetchCards();
 })();
 
+//                                            Filters
+
+//                                      Filters
+
+const filterSpinning = [
+    { transform: "rotate(0)" },
+    { transform: "rotate(10deg)" },
+    { transform: "rotate(-10deg)" },
+    { transform: "rotate(0)" },
+];
+
+const filterTiming = {
+    duration: 1000,
+    iterations: 1,
+};
+
 document.addEventListener("click", (e) => {
     const target = e.target;
 
@@ -77,6 +93,7 @@ document.addEventListener("click", (e) => {
             // On rend actif le filtre
             isActive.classList.remove("active");
             target.classList.add("active");
+            target.animate(filterSpinning, filterTiming);
 
             // On récupère la maison
             const filter = target.getAttribute("data-filter").toLowerCase();

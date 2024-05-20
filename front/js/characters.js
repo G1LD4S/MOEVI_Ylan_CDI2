@@ -32,6 +32,20 @@ async function displayCharacters() {
     });
 }
 
+//                                      Filters
+
+const filterSpinning = [
+    { transform: "rotate(0)" },
+    { transform: "rotate(10deg)" },
+    { transform: "rotate(-10deg)" },
+    { transform: "rotate(0)" },
+];
+
+const filterTiming = {
+    duration: 1000,
+    iterations: 1,
+};
+
 document.addEventListener("click", (e) => {
     const target = e.target;
 
@@ -39,13 +53,13 @@ document.addEventListener("click", (e) => {
         const isActive = document.querySelector(".filterBtn.active");
 
         if (isActive && isActive !== target) {
-            // On rend actif le filtre
+            // On rend actif le filtre + l'animation
             isActive.classList.remove("active");
             target.classList.add("active");
+            target.animate(filterSpinning, filterTiming);
 
             // On récupère la maison
             const filter = target.getAttribute("data-filter").toLowerCase();
-            console.log(filter);
             const allCards = document.querySelectorAll(".card");
 
             if (filter.toLowerCase() === "all") {
@@ -77,6 +91,8 @@ document.addEventListener("click", (e) => {
         window.location.href = "carte.html?slug=" + slug;
     }
 });
+
+//                                                  Search bar
 
 const searchBar = document.getElementById("searchBar");
 
